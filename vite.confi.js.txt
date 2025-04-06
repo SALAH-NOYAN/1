@@ -1,0 +1,15 @@
+// Fichier : vite.config.js (à créer à la racine de votre dossier)
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()], // Active le support React
+  build: {
+    outDir: 'dist', // Dossier où les fichiers compilés seront générés
+    emptyOutDir: true, // Vide le dossier avant chaque build
+  },
+  server: {
+    port: 5173, // Port utilisé en développement
+    open: true // Ouvre le navigateur automatiquement
+  }
+});
